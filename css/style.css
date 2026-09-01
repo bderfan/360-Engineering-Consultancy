@@ -1,0 +1,2673 @@
+@font-face {
+  font-family: 'Font Awesome 7 Free';
+  src: url('/webfonts/fa-brands-400.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Font Awesome 7 Free';
+  src: url('/webfonts/fa-solid-900.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+section{
+    padding-top: 100px;
+    padding-bottom: 50px;
+     display: block;
+}
+
+@media (max-width: 262px) {
+    section{
+    padding-top: 166px;
+}
+}
+
+html, body {
+  width: 100%;          /* full viewport width */
+  margin: 0;            /* remove default browser margin */
+  padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Noto Sans Bengali', 'SolaimanLipi', sans-serif;
+}
+
+
+
+/********************************** Logo and menu part css ***************************************/
+
+.navbar {
+  width: 100vw;          /* span full viewport */
+  position: fixed;      /* stay at top */
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: transform 0.6s ease-in-out;
+  background: #d6d6d6;
+}
+
+.navbar.hide-nav {
+  transform: translateY(-100%); /* slide up out of view */
+}
+
+
+
+.nav-link{
+    color: black;
+    font-size: 17px;
+    font-family: Mona Sans, sans-serif;
+}
+.nav-link:hover{
+    color: #363636;
+    letter-spacing: 5px;
+    transition: all linear .3s;
+    font-size: 20px;
+}
+
+
+#Nav_form button{
+    
+    cursor: pointer;
+}
+
+#Nav_form .searchinput{
+    width: 0;
+    padding: 0;
+    transition: all linear .3s;
+    opacity: 0;
+}
+
+#Nav_form .searchinput.active{
+    width: 200px;
+    opacity: 1;
+    padding: .375rem .75rem;
+     font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    background: transparent;
+}
+/* Dropdown animation */
+.navbar .dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: all 0.25s linear;
+  display: none; 
+    width: 500px;
+    left: -100%;
+    top: 0;
+}
+
+/* Bootstrap adds .show automatically */
+.navbar .dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible; 
+    display: block;
+    width: 500px;
+    left: -165%;
+    top: 0;
+}
+.btn-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+.btn-close i{
+    color: #000;
+}
+.navbar .one{
+    background: #DF6500;
+}
+
+.navbar .two{
+    background: #ff9842;
+}
+
+.navbar .three{
+    background: #ffb97f;
+}
+
+
+
+.navbar .dropdown-menu .dropdown-item{
+    color: black;
+    font-size: 17px;
+    line-height: 5;
+    font-family: Mona Sans, sans-serif;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover{
+    color: #363636;
+    letter-spacing: 5px;
+    transition: all linear .3s;
+    font-size: 17px;
+    background: transparent;
+}
+
+
+.menu-bg {
+	background: #dd660073;
+	animation: bg 1s;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	top: 0;
+    border-radius: var(--bs-border-radius-pill) !important;
+}
+.menu-bg a{
+    color: #fff;
+}
+@keyframes bg {
+    from {top: -50px;}
+    to {top: 0px;}
+}
+
+.btn-white{
+    color: #000;
+    background: #fff;
+}
+
+.border-white{
+    border-color: #fff;
+}
+
+
+/********************************** main part css ***************************************/
+main{
+    position: relative; top: 0; left: 0; width: 100vw; min-height: 100vh; background: rgba(0, 0, 0, 0.46);
+}
+/********************************** Banner part css ***************************************/
+
+#Banner {
+  position: relative;
+  height: 580px; /* full screen height */
+}
+
+#Banner .video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#Banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes video fill without distortion */
+}
+
+#Banner .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgb(68 68 68 / 79%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Banner .overlay .txt-yellow{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+}
+
+#Banner .cursor{
+     display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 0.1rem;
+  animation: blink 0.8s infinite;
+}
+
+#Banner .video_marquee{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    color: #fff;
+}
+
+
+
+/********************************** Service1 part css ***************************************/
+
+#Service1 .carousel-wrapper {
+  position: relative;
+  height: 905px;
+}
+
+#Service1 #bgCarousel {
+  z-index: 1; /* background */
+}
+
+#Service1 #bgImage{
+  height:905px;    
+}
+
+#Service1 h3 {
+  z-index: 2; /* foreground */
+}
+
+#Service1 .carousel-overlay {
+  z-index: 2; /* foreground */
+}
+
+#Service1 h3{
+    font-family: Alice, serif; 
+    font-size: 40px;
+}
+
+
+#Service1 .carousel-item img{
+    height:305px; 
+    object-fit:cover;
+    filter: blur(0px);
+    opacity:0.8;
+}
+
+
+@media (max-width: 576px) {
+   #Service1 .carousel-item img{
+    height:125px; 
+    
+}
+
+#Service1 #bgImage{
+  height:360px;    
+}
+
+
+#Service1 h3{
+    font-size: 25px;
+}
+
+#Service1 .carousel-wrapper {
+  height: 313px;
+}
+}
+
+
+/********************************** Project2 part css ***************************************/
+.section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-img {
+  position: absolute;
+  left: 0;
+  width: 50%; height: 100%;
+  z-index: 2; /* clip-path stays above */
+}
+
+.clip-mask {
+  width: 75%; height: 75%;
+  clip-path: polygon(16% 11%, 96% 4%, 100% 53%, 88% 100%, 9% 90%, 3% 51%);
+  overflow: hidden;
+  position: relative;
+  z-index: 2; /* mask layer */
+}
+
+.clip-mask img {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 1; /* image underneath mask */
+}
+
+.text-block {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: white;
+  opacity: 0; /* hidden initially */
+  z-index: 1; /* underneath clip-path image */
+  display: flex; align-items: center; justify-content: center;
+}
+
+
+.text-block-text{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%; height: 100%;
+}
+.text-block-text h1{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-block-text a{
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%);
+  background: #DE6501;
+}
+
+.text-block-text a:hover{
+    background: #3c3c3c;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+   .left-img {
+  width: 75%; 
+}
+    .text-block-text a {
+    top: 70%;
+    transform: translate(-50%, -70%);
+}
+}
+
+
+@media (max-width: 576px) {
+   .left-img {
+        left: 50%;
+        top: 60%;
+        width: 50%;
+        height: 55%;
+        z-index: 2;
+        transform: translate(-50%, -60%);
+}
+    .clip-mask {
+  width: 100%;
+    height: 60%;
+}
+    .text-block-text a {
+    top: 70%;
+    transform: translate(-50%, -70%);
+}
+    .text-block-text {
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+}
+/********************************** Special part css ***************************************/
+#Special {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#fixedLeft {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease;
+  z-index: 1; /* background layer */
+  color: #fff;
+  overflow: hidden;
+}
+
+#fixedLeft:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(187 187 187 / 72%);
+    z-index: 1;
+}
+
+
+
+#Special .slider-wrapper {
+  position: relative;
+  width: 100%; height: 100%;
+  z-index: 2; /* slides above background */
+}
+
+
+#fixedLeft .overlay-text {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 100%;
+  z-index: 999;
+  height: 100%;
+}
+#fixedLeft .overlay-text h2{
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    transform: translateY(-40%);
+}
+
+#Special .slider-viewport {
+  width: calc(200px * 3 + 2rem);
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    height: 200px;
+    bottom: 0;
+}
+
+
+#Special .slider {
+     display: flex;
+    width: 500%;
+    transition: transform 0.8s ease;
+}
+
+#Special .slide2 {
+  width: 200px;
+  margin-right: 1rem;
+}
+
+
+#Special .slide2 img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+#Special .slide2 .content {
+  display: none; /* hidden in small squares */
+}
+
+#Special .next, .prev{
+    background: #DF6500;
+    border-radius: 15px;
+    margin: 0 5px;
+}
+
+
+#Special .next:hover{
+    background: #fff;
+}
+
+#Special .prev:hover{
+    background: #fff;
+}
+
+
+@media (max-width: 576px) {
+    #Special .slider-viewport {
+  width: calc(200px * 2 + 2rem);
+        left: 135px;
+}
+    
+#Special .slide2 img {
+  height: 50%;
+ 
+}
+}
+
+
+/********************************** Banner2 part css ***************************************/
+
+#Banner2 img{
+    width:100%;
+    height:800px;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+#Banner2 img{
+    height:500px;
+}
+}
+
+@media (max-width: 576px) {
+#Banner2 img{
+    height:300px;
+}
+}
+/********************************** Interior part css ***************************************/
+
+
+
+.Interior .interior{
+     position: relative;
+    width: 100%;
+    height: 420px;
+}
+
+.Interior .interior_img{
+   position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(63% 5%, 100% 38%, 89% 96%, 0 85%, 1% 9%);
+    
+}
+
+.Interior .interior_img img{
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   
+}
+
+.Interior .interior_text{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.Interior .interior_text h1{
+   position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #cbcbcb;
+    font-size: 40px;
+     width: 55%;
+}
+.Interior .interior_text p{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    width: 75%;
+    height: 60%;
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    .Interior .interior{
+    height: 222px;
+}
+
+   .Interior .interior_img{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+    .Interior .interior_text{
+    height: 500px;
+}
+    .Interior .interior_text h1{
+        top: 10%;
+}
+    .Interior .interior_text p{
+    height: 60%;
+}
+
+}
+
+
+
+@media (max-width: 576px) {
+    
+    
+    .Interior .interior_text{
+    height: 900px;
+}
+  .Interior .interior_text p{
+    height: 60%;
+}
+
+    
+}
+
+/********************************** Interior2 part css ***************************************/
+
+
+
+.Interior2 .interior{
+     position: relative;
+    width: 100%;
+    height: 420px;
+}
+
+.Interior2 .interior_img{
+   position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(63% 5%, 100% 38%, 89% 96%, 0 85%, 1% 9%);
+    
+}
+
+.Interior2 .interior_img img{
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   
+}
+
+.Interior2 .interior_text{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.Interior2 .interior_text h1{
+   position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #cbcbcb;
+    font-size: 40px;
+    width: 55%;
+}
+.Interior2 .interior_text p{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    width: 75%;
+    height: 60%;
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    .Interior2 .interior{
+    height: 222px;
+}
+
+   .Interior2 .interior_img{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+    .Interior2 .interior_text{
+    height: 500px;
+}
+      .Interior2 .interior_text p{
+    height: 60%;
+}
+    .Interior2 .interior_text h1{
+        top: 10%;
+}
+    
+}
+
+@media (max-width: 576px) {
+    
+    
+    .Interior2 .interior_text{
+    height: 900px;
+}
+  .Interior2 .interior_text p{
+    height: 60%;
+}
+
+    
+}
+/********************************** Contact part css ***************************************/
+
+#Contact .contact_confirm {
+ display: inline-block;
+    padding: 20px 40px;
+    background-color: #ec1700;
+    color: #fff;
+    clip-path: polygon(50% 0%, 100% 0, 95% 53%, 100% 100%, 68% 100%, 32% 100%, 0 100%, 5% 54%, 0 0);
+    transform: rotate(-10deg);
+}
+
+
+#Contact .contact_invite {
+ display: inline-block;
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #000;
+    clip-path: polygon(50% 0%, 100% 0, 95% 53%, 100% 100%, 68% 100%, 32% 100%, 0 100%, 5% 54%, 0 0);
+    transform: rotate(-10deg);
+}
+
+
+
+
+#Contact .contact_help {
+    font-family: Alice, serif; font-size: 30px;
+ display: inline-block;
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #000;
+    clip-path: polygon(49% 0, 93% 9%, 100% 51%, 92% 93%, 51% 100%, 8% 93%, 0 51%, 9% 10%);
+    transform: rotate(-3deg);
+}
+
+#Cosultaion_form{
+    width: 75%;
+    margin: 0 auto;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#Cosultaion_form input, textarea{
+    display: block;
+    width: 100%;
+    border-radius: .375rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid rgb(255, 152, 66);
+}
+
+#Cosultaion_form span{
+    display: inline-block;
+    width: 23%;
+    align-items: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #d3d3d3;
+    border: 2px solid rgb(255 186 128);
+    border-radius: .375rem;
+}
+
+#Cosultaion_form #form_sq_input{
+    width: 75%;
+    display: inline-block;
+}
+
+#Cosultaion_form button{
+   background: #dcdcdc;
+}
+
+#Cosultaion_form button:hover{
+      background: #646464;
+    color: #fff;
+}
+
+#Cosultaion_form input:focus, #Cosultaion_form textarea:focus{
+    color: #212529;
+    background-color: #dedede;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(255 177 113);
+}
+
+.iti{
+    display: block !important;
+}
+
+.iti__country-list{
+  width: 365px !important;
+  background: rgb(255, 152, 66) !important;
+}
+
+.iti__dial-code{
+    width: 20% !important;
+    background: #c7dfe3 !important;
+}
+
+.iti__country-name{
+    width: 70% !important;
+    background: #c7dfe3 !important;
+}
+
+.iti input, .iti input[type=tel]{
+ padding-left: 45px !important;   
+}
+
+#login_from button:hover{
+    color: #fff;
+    background: #703300;
+}
+
+
+@media (max-width: 575px) {
+  #Contact .phone_icon {
+  top: 58%
+}
+    
+}
+
+@media (max-width: 250px) {
+#Contact .contact_help {
+  font-size: 20px;
+ 
+}
+    
+}
+/********************************** Map part css ***************************************/
+
+
+#Map .map_welcome{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+#Map .map_video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#Map .map_video-container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Map .map_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#Map .map_overlay h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+#Map #map{
+    width: 100%; 
+    height: 500px; 
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    #Map .map_welcome{
+    height: 250px;
+}
+    #Map #map{
+    height: 250px; 
+}
+    
+}
+
+/******************************** Footer part css ******************************************/
+
+#Footer{
+   background: #DD6601;
+}
+#Footer .copyright{
+    font-family: Mona Sans, sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+#Footer span{
+    font-size: 20px;
+    color: #000;
+    font-family: Mona Sans, sans-serif;
+}
+
+
+
+
+/******************************** Uttara project part css ******************************************/
+
+.Uttara_project {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+.Uttara_project video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;       /* behind everything */
+  display: none;    /* hidden initially */
+}
+.interior {
+  width: 50%;
+  height: 100%;
+}
+
+.interior_img {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 75%;
+  left: 0;
+  transform: translateY(-75%);
+  clip-path: polygon(16% 11%, 96% 4%, 100% 53%, 88% 100%, 9% 90%, 3% 51%);
+}
+
+.interior_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 160px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.interior_desc {
+  display: none; /* hidden initially */
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.interior_desc h2{
+    font-family: Alice, serif; font-size: 40px;
+}
+.two{
+    right: 50%;
+}
+
+/* video fade-in */
+.video-fade {
+  opacity: 0;
+  animation: videoFadeIn 1.5s ease forwards;
+}
+@keyframes videoFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* text slide-in */
+.text-slide {
+  opacity: 0;
+  animation: textSlideIn 1s ease forwards;
+}
+@keyframes textSlideIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 501px) {
+.interior_img {
+        height: 45%;
+     top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+}
+
+}
+@media (max-width: 500px) {
+.interior_img {
+        height: 30%;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+}
+
+    .play-btn {
+     font-size: 100px;
+}
+    .interior_desc {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%) !important;
+        width: 100%;
+    }
+        .interior_desc h2{
+    font-size: 30px;
+}
+}
+
+@media (max-width: 350px) {
+.interior_img {
+        height: 25%;
+}
+    .play-btn {
+     font-size: 75px;
+}
+        .interior_desc {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%) !important;
+        width: 100%;
+    }
+        .interior_desc h2{
+    font-size: 30px;
+}
+}
+
+@media (max-width: 251px) {
+.interior_img {
+        height: 20%;
+}
+    .play-btn {
+     font-size: 55px;
+}
+    .interior_desc {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%) !important;
+        width: 100%;
+    }
+           .interior_desc h2{
+    font-size: 25px;
+}
+}
+.trnsctn_modal2{
+    background: #c8c8c8; position: absolute; margin-top: 21%; width: 1000px; left: 50%; transform: translateX(-50%);
+}
+@media (max-width: 262px) {
+.trnsctn_modal2{
+ margin-top: 90%; width: 175px;
+}
+}
+@media (max-width: 315px) {
+.trnsctn_modal2{
+ margin-top: 55%; width: 235px;
+}
+}
+@media (max-width: 354px) {
+.trnsctn_modal2{
+ margin-top: 45%; width: 280px;
+}
+}
+@media (max-width: 444px) {
+.trnsctn_modal2{
+         margin-top: 35%;
+        width: 370px;
+}
+}
+@media (max-width: 504px) and (min-width: 445px) {
+.trnsctn_modal2{
+         margin-top: 30%;
+        width: 400px;
+}
+}
+@media (max-width: 576px) and (min-width: 505px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 480px;
+}
+}
+@media (max-width: 600px) and (min-width: 577px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 520px;
+}
+}
+@media (max-width: 650px) and (min-width: 601px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 550px;
+}
+}
+@media (max-width: 700px) and (min-width: 651px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 600px;
+}
+}
+@media (max-width: 720px) and (min-width: 701px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 620px;
+}
+}
+@media (max-width: 750px) and (min-width: 721px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 650px;
+}
+}
+@media (max-width: 768px) and (min-width: 751px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 680px;
+}
+}
+@media (max-width: 818px) and (min-width: 769px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 720px;
+}
+}
+@media (max-width: 868px) and (min-width: 819px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 770px;
+}
+}
+@media (max-width: 918px) and (min-width: 869px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 820px;
+}
+}
+@media (max-width: 968px) and (min-width: 919px) {
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 870px;
+}
+}
+@media (max-width: 992px) and (min-width: 969px){
+.trnsctn_modal2{
+         margin-top: 25%;
+        width: 920px;
+}
+}
+/******************************** Offer part css ******************************************/
+
+#Offer{
+    max-height: 3175px; height: 3175px;
+}
+#Offer .col_img{
+    height: 3175px; 
+    width: 100%;
+}
+#Offer .dream_mirpur{
+    display: inline-block; padding: 20px 40px; background: #ffda73;
+background: linear-gradient(32deg, rgba(255, 218, 115, 1) 30%, rgba(196, 196, 196, 1) 100%); color: #000; clip-path: polygon(50% 0%, 100% 0, 95% 53%, 100% 100%, 68% 100%, 32% 100%, 0 100%, 5% 54%, 0 0); transform: rotate(-7deg); margin-left: 225px;margin-top: 15px; font-family: Alice, serif; font-size: 40px;
+}
+#Offer .ndcol1st{
+    margin-top: 5rem; background: #e3e3e3; clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%); width: 500px;
+}
+
+@media (max-width: 421px) {
+#Offer .dream_mirpur{
+    margin-left: 110px;
+}
+
+}
+
+@media (max-width: 306px) {
+#Offer .dream_mirpur{
+    margin-left: 60px;
+}
+
+}
+
+@media (max-width: 252px) {
+#Offer .dream_mirpur{
+    margin-left: 40px;
+}
+#Offer{
+    max-height: 10315px; height: 10315px;
+}
+#Offer .col_img{
+    height: 10315px; 
+ 
+}
+#Offer .ndcol1st{
+    margin-top: 85rem;
+}
+
+#Offer .table thead {
+    display: none; /* hide headers */
+  }
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  #Offer .table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+  }
+  #Offer .table td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+  #Offer .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+
+#Offer .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#Offer .table th,
+#Offer .table td {
+  padding: 10px;
+  text-align: center;
+  font-family: Mona Sans, sans-serif;
+  border: 1px solid #969696;
+  overflow: hidden;
+  line-break: anywhere;
+  border-radius: 50%;
+}
+
+/* Mobile view: stack cells */
+@media (max-width: 768px) and (min-width: 253px) {
+    
+    #Offer{
+    max-height: 9760px; height: 9760px;
+}
+#Offer .col_img{
+    height: 9760px; 
+ 
+}
+#Offer .ndcol1st{
+    margin-top: 60rem;
+}
+
+
+  #Offer .table thead {
+    display: none; /* hide headers */
+  }
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  #Offer .table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+  }
+  #Offer .table td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+  #Offer .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+/* Booking colors */
+#Offer p.vacant { background-color: #DF6501; color: white; padding:5px; border-radius:4px; }
+#Offer p.booked { background-color: #F44336; color: white; padding:5px; border-radius:4px; }
+
+
+/******************************** Offer2 part css ******************************************/
+
+#Offer2 {
+  position: relative;
+     height: 550px;
+}
+#Offer2 .col_img2{
+    height: 550px; 
+    width: 100%;
+}
+#Offer2 .kitchen_offer{
+    margin-left: 175px; font-family: Mona Sans, sans-serif;
+}
+
+@media (max-width: 768px) {
+#Offer2 {
+     height: 730px;
+}
+#Offer2 .col_img2{
+    height: 730px; 
+}
+#Offer2 .kitchen_offer{
+    margin-left: 120px;
+}
+}
+
+@media (max-width: 408px) {
+
+#Offer2 .kitchen_offer{
+    margin-left: 75px;
+}
+}
+
+
+@media (max-width: 312px) {
+
+#Offer2 .kitchen_offer{
+    margin-left: 35px;
+}
+}
+
+@media (max-width: 270px) {
+
+#Offer2 .kitchen_offer{
+    margin-left: 20px;
+}
+}
+
+@media (max-width: 254px) {
+
+#Offer2 .kitchen_offer{
+    margin-left: 0;
+}
+}
+
+#Offer2 .kitchenatonly_offer{
+    margin-left: 250px; font-family: Mona Sans, sans-serif;
+}
+
+@media (max-width: 409px) {
+
+#Offer2 .kitchenatonly_offer{
+    margin-left: 170px;
+}
+}
+
+@media (max-width: 313px) {
+
+#Offer2 .kitchenatonly_offer{
+    margin-left: 90px;
+}
+}
+@media (max-width: 233px) {
+
+#Offer2 .kitchenatonly_offer{
+    margin-left: 55px;
+}
+}
+
+
+#Offer2 .kitchenatonly_offer_price{
+    display: inline-block; padding: 20px 40px; margin-left: 300px;
+background: #ffffff;
+background: linear-gradient(32deg, rgba(255, 255, 255, 1) 35%, rgba(255, 179, 66, 1) 99%); color: #000; clip-path: polygon(50% 0%, 100% 0, 95% 53%, 100% 100%, 68% 100%, 32% 100%, 0 100%, 5% 54%, 0 0); transform: rotate(-7deg); font-family: Alice, serif; font-size: 40px;
+}
+@media (max-width: 496px) {
+
+#Offer2 .kitchenatonly_offer_price{
+   margin-left: 235px;
+}
+}
+@media (max-width: 432px) {
+
+#Offer2 .kitchenatonly_offer_price{
+   margin-left: 200px;
+    margin-top: 10px;
+}
+}
+@media (max-width: 409px) {
+
+#Offer2 .kitchenatonly_offer_price{
+   margin-left: 125px;
+    margin-top: 10px;
+}
+}
+
+@media (max-width: 313px) {
+
+#Offer2 .kitchenatonly_offer_price{
+   margin-left: 50px;
+    margin-top: 10px;
+}
+}
+
+@media (max-width: 233px) {
+
+#Offer2 .kitchenatonly_offer_price{
+   margin-left: 25px;
+    margin-top: 10px;
+}
+}
+
+.down_payment{
+   font-family: Alice, serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+.down_payment{
+  font-size: 35px;
+}
+}
+@media (max-width: 576px) {
+.down_payment{
+  font-size: 25px;
+}
+}
+
+@media (max-width: 518px) {
+.down_payment{
+  font-size: 22px;
+}
+}
+
+@media (max-width: 460px) {
+.down_payment{
+  font-size: 20px;
+}
+}
+
+
+@media (max-width: 420px) {
+.down_payment{
+  font-size: 18px;
+}
+}
+
+
+@media (max-width: 370px) {
+.down_payment{
+  font-size: 17px;
+}
+}
+
+@media (max-width: 354px) {
+.down_payment{
+  font-size: 16px;
+}
+}
+
+@media (max-width: 333px) {
+.down_payment{
+  font-size: 15px;
+}
+}
+
+@media (max-width: 314px) {
+.down_payment{
+  font-size: 14px;
+}
+}
+
+@media (max-width: 292px) {
+.down_payment{
+  font-size: 13px;
+}
+}
+
+@media (max-width: 265px) {
+.down_payment{
+  font-size: 11px;
+}
+}
+@media (max-width: 247px) {
+.down_payment{
+  font-size: 10px;
+}
+}
+@media (max-width: 237px) {
+.down_payment{
+  font-size: 9px;
+}
+}
+@media (max-width: 205px) {
+.down_payment{
+  font-size: 8px;
+}
+}
+.bank_transfer1{
+    font-family: Alice, serif; 
+    font-size: 40px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+.bank_transfer1{
+  font-size: 35px;
+}
+}
+@media (max-width: 576px) {
+.bank_transfer1{
+  font-size: 25px;
+}
+}
+
+@media (max-width: 518px) {
+.bank_transfer1{
+  font-size: 22px;
+}
+}
+
+@media (max-width: 460px) {
+.bank_transfer1{
+  font-size: 20px;
+}
+}
+
+
+@media (max-width: 420px) {
+.bank_transfer1{
+  font-size: 18px;
+}
+}
+
+
+@media (max-width: 370px) {
+.bank_transfer1{
+  font-size: 17px;
+}
+}
+
+@media (max-width: 354px) {
+.bank_transfer1{
+  font-size: 16px;
+}
+}
+
+@media (max-width: 333px) {
+.bank_transfer1{
+  font-size: 15px;
+}
+}
+
+@media (max-width: 314px) {
+.bank_transfer1{
+  font-size: 14px;
+}
+}
+
+@media (max-width: 292px) {
+.bank_transfer1{
+  font-size: 13px;
+}
+}
+
+@media (max-width: 265px) {
+.bank_transfer1{
+  font-size: 11px;
+}
+}
+@media (max-width: 247px) {
+.bank_transfer1{
+  font-size: 10px;
+}
+}
+@media (max-width: 237px) {
+.bank_transfer1{
+  font-size: 9px;
+}
+}
+@media (max-width: 205px) {
+.bank_transfer1{
+  font-size: 8px;
+}
+}
+
+.pymnt_trnsfr{
+    font-family: Mona Sans, sans-serif;
+    text-align: center;
+}
+@media (max-width: 422px) {
+.pymnt_trnsfr{
+    font-size: 14px;
+}
+}
+@media (max-width: 355px) {
+.pymnt_trnsfr{
+    font-size: 13px;
+}
+}
+@media (max-width: 333px) {
+.pymnt_trnsfr{
+    font-size: 12px;
+}
+}
+@media (max-width: 315px) {
+.pymnt_trnsfr{
+    font-size: 11px;
+}
+}
+@media (max-width: 291px) {
+.pymnt_trnsfr{
+    font-size: 10px;
+}
+}
+@media (max-width: 265px) {
+.pymnt_trnsfr{
+    font-size: 9px;
+}
+}
+@media (max-width: 247px) {
+.pymnt_trnsfr{
+    font-size: 8px;
+}
+}
+@media (max-width: 205px) {
+.pymnt_trnsfr{
+    font-size: 7px;
+}
+}
+.pymnt_trnsfr_optn{
+    font-family: Mona Sans, sans-serif;
+}
+@media (max-width: 423px) {
+.pymnt_trnsfr_optn{
+    font-size: 15px;
+}
+}
+@media (max-width: 355px) {
+.pymnt_trnsfr_optn{
+    font-size: 14px;
+}
+}
+@media (max-width: 333px) {
+.pymnt_trnsfr_optn{
+    font-size: 12px;
+}
+}
+@media (max-width: 315px) {
+.pymnt_trnsfr_optn{
+    font-size: 11px;
+}
+}
+@media (max-width: 291px) {
+.pymnt_trnsfr_optn{
+    font-size: 10px;
+}
+}
+@media (max-width: 265px) {
+.pymnt_trnsfr_optn{
+    font-size: 9px;
+}
+}
+@media (max-width: 247px) {
+.pymnt_trnsfr_optn{
+    font-size: 8px;
+}
+}
+@media (max-width: 205px) {
+.pymnt_trnsfr_optn{
+    font-size: 7px;
+}
+}
+.trnsfr_rcpt{
+    font-family: Mona Sans, sans-serif;
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 422px) {
+.trnsfr_rcpt{
+    font-size: 14px;
+}
+}
+@media (max-width: 355px) {
+.trnsfr_rcpt{
+    font-size: 13px;
+}
+}
+@media (max-width: 333px) {
+.trnsfr_rcpt{
+    font-size: 12px;
+}
+}
+@media (max-width: 315px) {
+.trnsfr_rcpt{
+    font-size: 11px;
+}
+}
+@media (max-width: 291px) {
+.trnsfr_rcpt{
+    font-size: 10px;
+}
+}
+@media (max-width: 265px) {
+.trnsfr_rcpt{
+    font-size: 9px;
+}
+}
+@media (max-width: 247px) {
+.trnsfr_rcpt{
+    font-size: 8px;
+}
+}
+@media (max-width: 205px) {
+.trnsfr_rcpt{
+    font-size: 7px;
+}
+}
+
+.trnsctn_dta{
+    font-family: Mona Sans, sans-serif;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 422px) {
+.trnsctn_dta{
+    font-size: 14px;
+}
+}
+@media (max-width: 355px) {
+.trnsctn_dta{
+    font-size: 13px;
+}
+}
+@media (max-width: 333px) {
+.trnsctn_dta{
+    font-size: 12px;
+}
+}
+@media (max-width: 315px) {
+.trnsctn_dta{
+    font-size: 11px;
+}
+}
+@media (max-width: 291px) {
+.trnsctn_dta{
+    font-size: 10px;
+}
+}
+@media (max-width: 265px) {
+.trnsctn_dta{
+    font-size: 9px;
+}
+}
+@media (max-width: 247px) {
+.trnsctn_dta{
+    font-size: 8px;
+}
+}
+@media (max-width: 205px) {
+.trnsctn_dta{
+    font-size: 7px;
+}
+}
+.trnsfr_lbl{
+    font-family: Mona Sans, sans-serif;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 422px) {
+.trnsfr_lbl{
+    font-size: 14px;
+}
+}
+@media (max-width: 355px) {
+.trnsfr_lbl{
+    font-size: 13px;
+}
+}
+@media (max-width: 333px) {
+.trnsfr_lbl{
+    font-size: 12px;
+}
+}
+@media (max-width: 315px) {
+.trnsfr_lbl{
+    font-size: 11px;
+}
+}
+@media (max-width: 291px) {
+.trnsfr_lbl{
+    font-size: 10px;
+}
+}
+@media (max-width: 265px) {
+.trnsfr_lbl{
+    font-size: 9px;
+}
+}
+@media (max-width: 247px) {
+.trnsfr_lbl{
+    font-size: 8px;
+}
+}
+@media (max-width: 205px) {
+.trnsfr_lbl{
+    font-size: 7px;
+}
+}
+
+
+.trnsfr_err{
+    font-family: Mona Sans, sans-serif;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 422px) {
+.trnsfr_err{
+    font-size: 14px;
+}
+}
+@media (max-width: 355px) {
+.trnsfr_err{
+    font-size: 13px;
+}
+}
+@media (max-width: 333px) {
+.trnsfr_err{
+    font-size: 12px;
+}
+}
+@media (max-width: 315px) {
+.trnsfr_err{
+    font-size: 11px;
+}
+}
+@media (max-width: 291px) {
+.trnsfr_err{
+    font-size: 10px;
+}
+}
+@media (max-width: 265px) {
+.trnsfr_err{
+    font-size: 9px;
+}
+}
+@media (max-width: 247px) {
+.trnsfr_err{
+    font-size: 8px;
+}
+}
+@media (max-width: 205px) {
+.trnsfr_err{
+    font-size: 7px;
+}
+}
+
+
+.trnsfr_btn{
+   background: #7d7d7d;
+    color: #fff; 
+    font-family: Mona Sans, sans-serif;
+    font-size: 14px;
+}
+
+@media (max-width: 422px) {
+.trnsfr_btn{
+    font-size: 14px;
+}
+}
+@media (max-width: 355px) {
+.trnsfr_btn{
+    font-size: 13px;
+}
+}
+@media (max-width: 333px) {
+.trnsfr_btn{
+    font-size: 12px;
+}
+}
+@media (max-width: 315px) {
+.trnsfr_btn{
+    font-size: 11px;
+}
+}
+@media (max-width: 291px) {
+.trnsfr_btn{
+    font-size: 10px;
+}
+}
+@media (max-width: 265px) {
+.trnsfr_err{
+    font-size: 9px;
+}
+}
+@media (max-width: 247px) {
+.trnsfr_btn{
+    font-size: 8px;
+}
+}
+@media (max-width: 205px) {
+.trnsfr_btn{
+    font-size: 7px;
+}
+}
+.trnsfr_btn:hover{
+      background: #7d7d7d;
+    color: #fff; 
+}
+.Category_form{
+    opacity: 1 !important;
+    visibility: visible !important;
+    background-color: #ff953e !important;
+}
+
+.trnsctn_modal{
+    background: #c8c8c8; width: 1000px; left: 50%; transform: translateX(-50%);
+}
+@media (max-width: 992px) {
+.trnsctn_modal{
+     width: 900px;
+}
+}
+@media (max-width: 768px) {
+.trnsctn_modal{
+     width: 650px;
+}
+}
+@media (max-width: 686px) {
+.trnsctn_modal{
+     width: 550px;
+}
+}
+@media (max-width: 601px) {
+.trnsctn_modal{
+     width: 450px;
+}
+}
+@media (max-width: 501px) {
+.trnsctn_modal{
+     width: 350px;
+}
+}
+@media (max-width: 385px) {
+.trnsctn_modal{
+     width: 250px;
+}
+}
+@media (max-width: 281px) {
+.trnsctn_modal{
+     width: 200px;
+}
+}
+@media (max-width: 253px) {
+.trnsctn_modal{
+     width: 175px;
+}
+}
+
+
+
+
+/******************************** Project_detalis part css ******************************************/
+.carousel-img {
+  width: 75%;
+ height: 350px;
+  object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Desktop screens */
+@media (max-width: 268px) {
+  .carousel-img {
+    height: 150px;
+  }
+}
+
+@media (min-width: 269px) and (max-width: 300px){
+  .carousel-img {
+    height: 180px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 576px){
+  .carousel-img {
+    height: 200px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+  .carousel-img {
+    height: 250px;
+  }
+}
+
+
+
+
+
+
+.middle {
+  position: fixed;
+  bottom: 190px;
+  right: 15px;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 30%;
+  opacity: 0; /* make visible */
+  cursor: pointer;
+  overflow: visible; /* allow burst outside */
+  
+}
+
+/* Icon stays centered */
+.middle i {
+  font-weight: 900;              
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0A66C2;                  
+  font-size: 55px;               
+  z-index: 2; /* icon above waves */
+}
+
+/* Continuous burst waves attached to .bottom */
+.middle::before,
+.middle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #0A66C2; /* Facebook blue */
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 1; /* behind icon */
+  
+}
+
+.middle:hover{
+   animation: jump 1s infinite ease-in-out;
+    
+}
+.middle:hover::after, .middle:hover::before{
+    animation: burstWave 1s infinite;
+    
+}
+
+
+
+
+
+
+
+
+
+.top {
+  position: fixed;
+  bottom: 100px;
+  right: 15px;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 30%;
+  opacity: 0; /* make visible */
+  cursor: pointer;
+  overflow: visible; /* allow burst outside */
+  
+}
+
+/* Icon stays centered */
+.top i {
+  font-weight: 900;              
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00DF0F;                  
+  font-size: 55px;               
+  z-index: 2; /* icon above waves */
+}
+
+/* Continuous burst waves attached to .bottom */
+.top::before,
+.top::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgb(0, 223, 15); /* Facebook blue */
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 1; /* behind icon */
+  
+}
+
+.top:hover{
+   animation: jump 1s infinite ease-in-out;
+    
+}
+.top:hover::after, .top:hover::before{
+    animation: burstWave 1s infinite;
+    
+}
+
+
+.bottom {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  width: 60px;
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 30%;
+  opacity: 0; /* make visible */
+  cursor: pointer;
+  overflow: visible; /* allow burst outside */
+}
+
+/* Icon stays centered */
+.bottom i {
+  font-weight: 900;              
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0866FF;                  
+  font-size: 30px;               
+  z-index: 2; /* icon above waves */
+}
+
+/* Continuous burst waves attached to .bottom */
+.bottom::before,
+.bottom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgb(8, 102, 255); /* Facebook blue */
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 1; /* behind icon */
+  
+}
+.bottom:hover{
+   animation: jump 1s infinite ease-in-out;
+    
+}
+.bottom:hover::after, .bottom:hover::before{
+    animation: burstWave 1s infinite;
+    
+}
+
+/* Continuous outward burstwave */
+@keyframes burstWave {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.75);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.75);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+.upper_top {
+    --offset: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: 5px;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+    width: 45px;
+    aspect-ratio: 1;
+    background: #000;
+    border-radius: 30%;
+    opacity: 0;
+    z-index: 999;
+}
+.upper_top:hover{
+    background: #DF6500;
+    animation: jump 1s infinite ease-in-out;
+}
+.upper_top:before {
+  content:"";
+  position:absolute;
+  inset:30%;
+  transform:translateY(20%) rotate(-45deg);
+  border-top:5px solid #DF6500;
+  border-right:5px solid #DF6500;
+}
+.upper_top:hover::before{
+    border-top:5px solid #fff;
+    border-right:5px solid #fff;
+}
+
+
+
+
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+
+
+
+
+
+
+/******************************** privacy part css ******************************************/
+
+.privacy p{
+    line-height: 30px;
+}
+
+
+
+/******************************** Materials part css ******************************************/
+
+
+#Materials {
+  min-height: 100vh;        /* section fills viewport */
+  display: flex;            /* flex container */
+}
+
+#Materials .row {
+  flex: 1;                  /* row fills section */
+  display: flex;            /* flex children */
+}
+
+#Materials .col-3,
+#Materials .col-9 {
+  display: flex;
+  flex-direction: column;   /* stack content vertically */
+}
+
+#Materials .list-group {
+  flex: 1;                  /* fills column height */
+  overflow-y: auto;         /* scroll if too many items */
+  background: #fff;
+}
+
+/* Slow down Bootstrap collapse animation */
+.collapse {
+  transition: height 0.7s ease, 
+              max-height 0.7s ease; /* adjust duration */
+}
+
+
+
+
+
+
+
+
+
+/******************************** Service2 part css ******************************************/
+
+#Service2 #Service2_row{
+     height: 2550px;
+}
+
+#Service2 .card img{
+    height: 150px;
+}
+
+@media (max-width: 576px) {
+   #Service2 .card img{
+    height: 200px;
+} 
+
+#Service2 #Service2_row{
+     height: 3700px;
+}
+}
+
+
+@media (min-width: 576px) {
+
+#Service2 #Service2_row{
+     height: 3200px;
+}
+}
+
+
+@media (max-width: 496px) {
+#Service2 #Service2_row{
+     height: 6730px;
+}
+}
+.button-group {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.button {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 45px;
+    border: 5px solid #D6AD8A;
+    margin: 5px 0;
+}
+
+.button:hover {
+  background-color: #DD6601;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #fff;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #DD6601;
+}
+
+.button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+
+.element-item {
+  float: left;
+  width:100%;
+    position: relative;
+   
+}
+
+.element-item img {
+    width: 100%;
+    height: 200px;
+}
+
+
+.kitchenatonly_offer_price{
+    display: inline-block; padding: 20px 40px; margin-left: 190px;
+background: #ffffff;
+background: linear-gradient(32deg, rgb(205, 203, 203) 35%, rgba(255, 179, 66, 1) 99%);
+transform: rotate(-7deg); font-family: Alice, serif; font-size: 40px;
+}
+@media (max-width: 496px) {
+.kitchenatonly_offer_price{
+   margin-left: 235px;
+}
+}
+@media (max-width: 432px) {
+
+.kitchenatonly_offer_price{
+   margin-left: 200px;
+    margin-top: 10px;
+}
+}
+@media (max-width: 409px) {
+
+.kitchenatonly_offer_price{
+   margin-left: 125px;
+    margin-top: 10px;
+}
+}
+
+@media (max-width: 313px) {
+
+.kitchenatonly_offer_price{
+   margin-left: 50px;
+    margin-top: 10px;
+}
+}
+
+@media (max-width: 233px) {
+
+.kitchenatonly_offer_price{
+   margin-left: 25px;
+    margin-top: 10px;
+}
+}
+
+
+
+
+
+/******************************** Interior_drawing part css ******************************************/
+
+
+   #wallCanvas { 
+       border:10px solid #fff;
+       cursor:crosshair;
+       display:block;
+       margin-bottom:20px;
+       width: 100%;
+       height: 500px;
+}
+
+
+.tools button{
+    padding: 5px 10px;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 45px;
+  border: 5px solid #D6AD8A;
+  margin: 5px 0;
+}
+
+.tools button:hover{
+background-color: #DD6601;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #fff;
+}
+
+
+
+
+    .palette img { 
+        width:120px;
+        height:100px;
+        object-fit:cover;
+        border:2px solid #333;
+        margin:5px;
+        cursor:pointer; 
+}
+
+
+    .palette img:hover { 
+        border-color:#934301; 
+        transform:scale(1.05);
+}
+
+
+    .colors button { 
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        border:2px solid #333;
+        margin:5px;
+        cursor:pointer; 
+}
+.prevBtn, .nextBtn{
+   width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  background: #DBDBDB;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 5px;
+}
+
+.prevBtn2, .nextBtn2{
+   width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  background: #DBDBDB;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 5px;
+}
+
+
+.prevBtn3, .nextBtn3{
+   width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  background: #DBDBDB;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 5px;
+}
+
+
+
+.prevBtn4, .nextBtn4{
+   width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  background: #DBDBDB;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 5px;
+}
+
+
+
+.prevBtn5, .nextBtn5{
+   width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  background: #DBDBDB;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 5px;
+}
+#Interior_drawing{
+  position: relative;  
+      height: 2200px;
+}
+
+@media (max-width: 576px) {
+#Interior_drawing{
+      height: 3165px;
+}
+}
+
+#Interior_drawing .video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#Interior_drawing video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes video fill without distortion */
+}
+
+#Interior_drawing .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgb(68 68 68 / 79%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+   .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px 0;
+  text-align: center;
+  font-family: Mona Sans, sans-serif;
+  border: 1px solid #ddd;
+     overflow: hidden;
+      height: auto;
+      font-size: 15px;
+}
+
+.table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .table th{
+    display: none; /* hide thead, but we'll show labels via data-label */
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+.table tr:first-child {
+    display: none;
+    
+  }
+  .table tr {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 10px;
+    
+  }
+
+  .table td {
+    text-align: left;
+    padding: 8px;
+    position: relative;
+       overflow: hidden;
+      height: auto;
+       line-break: anywhere;
+  }
+
+  /* Show header labels before each cell */
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+}
